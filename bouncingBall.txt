@@ -1,0 +1,17 @@
+package bouncing
+
+
+
+fun bouncingBall(h:Double , bounce:Double, window:Double):Int {
+    if( h > 0 && bounce > 0 && bounce < 1 && window < h){
+        var rebounds = h * bounce;
+        var count = 1;
+        while(rebounds > window){
+            count += 2;
+            rebounds = rebounds * bounce;
+        }
+        return count
+    }else{
+        return -1
+    }
+}
